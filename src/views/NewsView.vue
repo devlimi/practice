@@ -1,7 +1,10 @@
 <template>
   <div>
-    <div v-for="user in fetchedNews" v-bind:key="user.id">
-      {{user.title}}
+    <div v-for="item in fetchedNews" v-bind:key="item.id">
+      <a v-bind:href="item.url">
+        {{item.title}}
+      </a>
+    <small>{{item.time_ago}}by {{item.user}}</small>
     </div>
   </div>
 </template>
